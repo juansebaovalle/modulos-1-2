@@ -1,0 +1,24 @@
+<ion-header>
+  
+</ion-header>
+
+<ion-content>
+    <ion-list *ngIf="listado">
+        <ion-list-header>
+          Listado Modulo
+        </ion-list-header>
+
+        <ion-item *ngFor="let item of listado">
+          <ion-avatar slot="start">
+            <img [src]="item.avatar">
+          </ion-avatar>
+          <ion-label>
+            <h2>{{ item.first_name }} {{ item.last_name }}</h2>
+            <p>{{ item.email }}</p>
+          </ion-label>
+        </ion-item>
+
+        
+      </ion-list>
+  
+</ion-content>
