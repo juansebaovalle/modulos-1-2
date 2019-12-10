@@ -1,5 +1,5 @@
 <ion-header>
-  
+  <app-encabezado [tituloPagina]="titpag"></app-encabezado>
 </ion-header>
 
 <ion-content>
@@ -16,6 +16,7 @@
             <h2>{{ item.first_name }} {{ item.last_name }}</h2>
             <p>{{ item.email }}</p>
           </ion-label>
+          <ion-icon name="arrow-round-forward" (click)="irA(item)"></ion-icon>
         </ion-item>
 
         

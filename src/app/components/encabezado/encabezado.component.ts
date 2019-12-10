@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-encabezado',
@@ -7,9 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EncabezadoComponent implements OnInit {
 
-  tituloPagina: string = "Página principal";
+  @Input() tituloPagina: string;
   imagenLateral: string = "/assets/logo-duoc.jpg";
-
+  
   constructor() { }
 
   ngOnInit() {}

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-detalle',
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetallePage implements OnInit {
 
-  constructor() { }
+  nombrePagina = "Pagina detalle";
+
+  datosUsuario: any;
+
+  constructor(
+    private actRoute: ActivatedRoute
+  ) { 
+    this.datosUsuario = this.actRoute.queryParams.subscribe(datosRecibidos => {
+      this.datosUsuario = JSON.parse(datosRecibidos['dUsuario']);
+      console.log(this.datosUsuario);
+    })
+   }
 
   ngOnInit() {
+    
+    
   }
 
 }
