@@ -8,7 +8,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class DetallePage implements OnInit {
 
-  nombrePagina = "Pagina detalle";
+  nombrePagina = "Detalle";
 
   datosUsuario: any;
 
